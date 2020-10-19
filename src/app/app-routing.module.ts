@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { BlogComponent } from './blog/blog.component';
 
 
 // Implement the routes for BlogComponent with path as 'addblog'
-const routes: Routes = [];
+const routes: Routes = [
+  {path:'addblog',component:BlogComponent},
+  {path:'',redirectTo:'/addblog',pathMatch:'full'}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
